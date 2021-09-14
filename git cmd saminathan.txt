@@ -1,0 +1,267 @@
+Microsoft Windows [Version 10.0.19042.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\saminathan1c>git --version
+git version 2.33.0.windows.2
+
+C:\Users\saminathan1c>mkdir TrainingGit
+
+C:\Users\saminathan1c>cd TrainingGid
+The system cannot find the path specified.
+
+C:\Users\saminathan1c>cd TrainingGit
+
+C:\Users\saminathan1c\TrainingGit>git init
+Initialized empty Git repository in C:/Users/saminathan1c/TrainingGit/.git/
+
+C:\Users\saminathan1c\TrainingGit>notepad
+
+C:\Users\saminathan1c\TrainingGit>git add Demotext.txt
+
+C:\Users\saminathan1c\TrainingGit>git config --global user.name "saminathan"
+
+C:\Users\saminathan1c\TrainingGit>git config --global user.email "saminathan.1.c@apisero.com"
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "1st commit"
+[master (root-commit) 83eab2d] 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Demotext.txt
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03 (HEAD -> master)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03 (HEAD -> master)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git add Demotext.txt
+
+C:\Users\saminathan1c\TrainingGit>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Demotext.txt
+
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "2st commit"
+[master 995573a] 2st commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit 995573ac5132aaae1c0c6a42013a8f7de4eb1889 (HEAD -> master)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:18:20 2021 +0530
+
+    2st commit
+
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git tag -a v1.0 -m "1st tag"
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit 995573ac5132aaae1c0c6a42013a8f7de4eb1889 (HEAD -> master, tag: v1.0)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:18:20 2021 +0530
+
+    2st commit
+
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git tag -a v0.1 83eab2d3d2dfa125a450b334405902b9e2e2eb03 -m "2nd tag"
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit 995573ac5132aaae1c0c6a42013a8f7de4eb1889 (HEAD -> master, tag: v1.0)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:18:20 2021 +0530
+
+    2st commit
+
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03 (tag: v0.1)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git show 1.0
+fatal: ambiguous argument '1.0': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+C:\Users\saminathan1c\TrainingGit>git show v1.0
+tag v1.0
+Tagger: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:29:45 2021 +0530
+
+1st tag
+
+commit 995573ac5132aaae1c0c6a42013a8f7de4eb1889 (HEAD -> master, tag: v1.0)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:18:20 2021 +0530
+
+    2st commit
+
+diff --git a/Demotext.txt b/Demotext.txt
+index c5bb4dc..e8ffd30 100644
+--- a/Demotext.txt
++++ b/Demotext.txt
+@@ -1 +1 @@
+-Hai this is the training. We are working on GIT.
+\ No newline at end of file
++Hai this is the training. We are working on GIT. This is working properly.
+\ No newline at end of file
+
+C:\Users\saminathan1c\TrainingGit>git remote add variable https://github.com/saminathanc/first_repo.git
+
+C:\Users\saminathan1c\TrainingGit>git push variable master
+info: please complete authentication in your browser...
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 529 bytes | 58.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/saminathanc/first_repo.git
+ * [new branch]      master -> master
+
+C:\Users\saminathan1c\TrainingGit>git pull variable master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 668 bytes | 33.00 KiB/s, done.
+From https://github.com/saminathanc/first_repo
+ * branch            master     -> FETCH_HEAD
+   995573a..af0c98e  master     -> variable/master
+Updating 995573a..af0c98e
+Fast-forward
+ Demotext.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\saminathan1c\TrainingGit>git log
+commit af0c98e00706196dcc5777832c06a1e5dee5a9a2 (HEAD -> master, variable/master)
+Author: saminathanc <90307804+saminathanc@users.noreply.github.com>
+Date:   Thu Sep 9 12:12:11 2021 +0530
+
+    3rd commit
+
+commit 995573ac5132aaae1c0c6a42013a8f7de4eb1889 (tag: v1.0)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:18:20 2021 +0530
+
+    2st commit
+
+commit 83eab2d3d2dfa125a450b334405902b9e2e2eb03 (tag: v0.1)
+Author: saminathan <saminathan.1.c@apisero.com>
+Date:   Thu Sep 9 11:07:02 2021 +0530
+
+    1st commit
+
+C:\Users\saminathan1c\TrainingGit>git push variable tag
+fatal: tag shorthand without <tag>
+
+C:\Users\saminathan1c\TrainingGit>git push variable --tag
+Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 283 bytes | 283.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/saminathanc/first_repo.git
+ * [new tag]         v0.1 -> v0.1
+ * [new tag]         v1.0 -> v1.0
+
+C:\Users\saminathan1c\TrainingGit>git branch
+* master
+
+C:\Users\saminathan1c\TrainingGit>git branch apisero
+
+C:\Users\saminathan1c\TrainingGit>git branch
+  apisero
+* master
+
+C:\Users\saminathan1c\TrainingGit>git checkout apisero
+Switched to branch 'apisero'
+
+C:\Users\saminathan1c\TrainingGit>git add .
+
+C:\Users\saminathan1c\TrainingGit>git branch
+* apisero
+  master
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "4th commit from apisero branch"
+On branch apisero
+nothing to commit, working tree clean
+
+C:\Users\saminathan1c\TrainingGit>git add .
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "4th commit from apisero branch"
+On branch apisero
+nothing to commit, working tree clean
+
+C:\Users\saminathan1c\TrainingGit>git add .
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "4th commit from apisero branch"
+[apisero b4a5655] 4th commit from apisero branch
+ 1 file changed, 1 insertion(+)
+
+C:\Users\saminathan1c\TrainingGit>git branch
+* apisero
+  master
+
+C:\Users\saminathan1c\TrainingGit>git merge
+fatal: No remote for the current branch.
+
+C:\Users\saminathan1c\TrainingGit>git merge apisero
+Already up to date.
+
+C:\Users\saminathan1c\TrainingGit>git add .
+
+C:\Users\saminathan1c\TrainingGit>git commit -m "4th commit from apisero branch"
+[apisero 54dea5f] 4th commit from apisero branch
+ 1 file changed, 1 insertion(+)
+
+C:\Users\saminathan1c\TrainingGit>git checkout master
+Switched to branch 'master'
+
+C:\Users\saminathan1c\TrainingGit>git merge apisero
+Updating af0c98e..54dea5f
+Fast-forward
+ Demotext.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+C:\Users\saminathan1c\TrainingGit>git push variable master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 613 bytes | 613.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/saminathanc/first_repo.git
+   af0c98e..54dea5f  master -> master
+
+C:\Users\saminathan1c\TrainingGit>git push variable apisero
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'apisero' on GitHub by visiting:
+remote:      https://github.com/saminathanc/first_repo/pull/new/apisero
+remote:
+To https://github.com/saminathanc/first_repo.git
+ * [new branch]      apisero -> apisero
+
+C:\Users\saminathan1c\TrainingGit>
